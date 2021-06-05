@@ -1,0 +1,25 @@
+
+<div class = "container">
+  <div *ngFor="let column of columns; let oddCol = odd"
+      class = "columns">
+
+    <div *ngFor="let row of rows; let oddRow = odd"
+
+        class = "rows">
+
+      <div class="cell"
+        id="{{column}}{{row}}"
+        (click) = "invert()"
+        [ngClass]="{'dark': (oddRow ||  oddCol) && (!oddRow ||  !oddCol) }"
+
+        dndDropzone
+        (dndDragover)="onDragover($event)"
+        (dndDrop)="onDrop($event )"
+      >
+
+      </div>
+
+    </div>
+  </div>
+</div>
+

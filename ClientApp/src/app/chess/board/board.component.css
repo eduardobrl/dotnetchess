@@ -1,0 +1,32 @@
+.container {
+  display: flex;
+  flex-direction: row;
+}
+
+
+.columns {
+
+}
+
+.rows {
+
+}
+
+.dark {
+  background-color: #61AD72;
+}
+
+.cell {
+  display: flex;
+
+  min-height: 60px;
+  min-width: 60px;
+
+  max-height: 80px;
+  max-width: 80px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: black;
+  align-items: center;
+  justify-content: center;
+}

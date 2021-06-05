@@ -1,0 +1,13 @@
+dotnetchessdb:
+    image: postgres
+    container_name: dotnetchessdb
+    restart: always
+    tty: true
+    ports:
+      - "5432:5432"
+    volumes:
+      - .docker/dbdata:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_USER=dotnetchess
+      - POSTGRES_PASSWORD=123RoC@mbole
+      - POSTGRES_DB=dotnetchess

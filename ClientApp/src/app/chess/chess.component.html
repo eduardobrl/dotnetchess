@@ -1,0 +1,33 @@
+
+
+<div class="piecesContainer"
+    (dndDragover)="onDragover($event)"
+    (dndDrop)="onDrop($event)"
+>
+
+  <div *ngFor="let piece of pieces"
+     [dndDraggable]="piece"
+     [dndEffectAllowed]="draggable.effectAllowed"
+     [dndDisableIf]="draggable.disable"
+     (dndStart)="onDragStart($event)"
+     (dndCopied)="onDraggableCopied($event)"
+     (dndLinked)="onDraggableLinked($event)"
+     (dndMoved)="onDraggableMoved($event)"
+     (dndCanceled)="onDragCanceled($event)"
+     (dndEnd)="onDragEnd($event)"
+     >
+
+    <app-pieces white="" piece="{{piece}}"></app-pieces>
+  </div>
+
+</div>
+
+<app-board ></app-board>
+
+<div class="piecesContainer">
+
+  <div *ngFor="let piece of pieces">
+    <app-pieces white="true" piece="{{piece}}"></app-pieces>
+  </div>
+
+</div>
